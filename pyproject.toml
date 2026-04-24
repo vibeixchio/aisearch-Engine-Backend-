@@ -1,0 +1,53 @@
+[project]
+name = "ai-search-backend"
+version = "2.0.0"
+description = "Production-grade AI Search Engine Backend — PostgreSQL, Redis, Z+ Security"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Core
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "gunicorn>=22.0.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.1",
+    # Database — PostgreSQL (Supabase)
+    "asyncpg>=0.29.0",
+    "sqlalchemy[asyncio]>=2.0.25",
+    "alembic>=1.13.0",
+    # Redis
+    "redis>=5.0.3",
+    # Auth & Security
+    "passlib[bcrypt]>=1.7.4",
+    "pyjwt>=2.8.0",
+    "python-multipart>=0.0.9",
+    # Email (Resend)
+    "httpx>=0.27.0",
+    # AI / LLM
+    "langchain>=0.1.13",
+    "langchain-groq>=0.1.2",
+    "langgraph>=0.0.34",
+    "langchain-google-genai>=1.0.5",
+    # RAG & Vector Search
+    "qdrant-client>=1.9.0",
+    "langchain-qdrant>=0.1.1",
+    "sentence-transformers>=3.0.0",
+    "rank-bm25>=0.2.2",
+    "numpy>=1.26.0",
+    # Search & Scraping
+    "beautifulsoup4>=4.12.3",
+    "trafilatura>=1.8.1",
+    "duckduckgo-search>=5.2.0",
+    # Document Processing
+    "pymupdf>=1.24.1",
+    "pandas>=2.2.1",
+    "tabulate>=0.9.0",
+    # Resilience
+    "tenacity>=8.2.3",
+    # Logging
+    "python-json-logger>=2.0.7",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
